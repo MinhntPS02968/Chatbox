@@ -1,0 +1,66 @@
+body{
+    background-color: #f7f7f7;
+    color: #505050;
+}
+.header{
+    background-color: #369;
+}
+.header .navbar .form-control , .btn {
+    border-radius: 0;
+    border-right: 0;
+}
+.header .navbar .btn {
+    background-color: #f2f2f2;
+    border-color: #f2f2f2;
+    border-left: 0;
+}
+.header .navbar .search{
+    width: 100%;
+}
+.header .navbar .nav-item a {
+    color: #f90;
+    font-size: 16px;
+    font-weight: bold;
+}
+.header .navbar .nav-item a:hover {
+    color: #f90;
+}
+.header .navbar .nav-item a span{
+    color: white;
+}
+@media screen and (max-width: 1360px) {
+    .sup-text{
+        display: none;
+    }
+}
+
+.dropdown>.dropdown-menu {
+    margin-top: -38px;
+    left:100%;
+    transition: 0.3s all ease-in-out;
+}
+.dropdown:hover>.dropdown-menu {
+    display: block;
+    top: 100%;
+}
+
+.dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+.badge-pill{
+    background-color: #f90;
+    font-size: 12px;
+}
+
+/*.nav-item .nav-link .fa-shopping-cart{
+    width: 40px;
+}.nav-item .cart{
+    position: relative;
+}
+.nav-item .cart .cart-number{
+    position: absolute;
+    top:5px;
+    color: #0f0f0f;
+}*/
+
