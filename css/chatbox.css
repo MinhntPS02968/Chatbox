@@ -1,5 +1,29 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box; // 1
+}
 .boxchat{
     display: inline-block;
+}
+.boxchat a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.boxchat a:hover {
+    color: #0056b3;
+}
+
+.boxchat a:not([href]) {
+    color: inherit;
+    text-decoration: none;
+}
+
+.boxchat a:not([href]):hover {
+    color: inherit;
+    text-decoration: none;
 }
 #topup{
     position: fixed;
@@ -9,12 +33,23 @@
     right: 20px;
     width: 0px;
     height: 0px;
+    padding-bottom: 10px;
     overflow: hidden;
+    display: flex !important;
+    flex-direction: column-reverse !important;
     background-color: transparent;
 }
+
 #topup a .icon{
     width: 60px;
     height: 60px;
+    padding: 2px;
+}
+#topup a .icon:hover{
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    transition: 0.6s;
 }
 /* Button used to open the chat form - fixed at the bottom of the page */
 .open-button {
@@ -38,13 +73,41 @@
     right: 0;
     z-index: 9;
 }
-@media screen and (max-width: 768px){
-    .chat-popup {
-        width: 100%;
-    }
-    .form-container {
-        width: 100% !important;
-    }
+.chat-popup .emoji{
+width: 90%;
+border-top: 1px solid #999;
+margin:  0 15px 0 15px;
+padding: 5px 0 5px 0;
+}
+.chat-popup .emoji a{
+color: #999;
+background-color: transparent;
+margin-right: 5px;
+padding: 4px;
+float: left;
+}
+.chat-popup .emoji a:hover{
+color: #0f0f0f;
+text-decoration: none;
+}
+.chat-popup .emoji .emoji-box{
+float: left;
+}
+.chat-popup .emoji .emoji-box a{
+border-radius: 50%;
+text-align: center;
+padding: 4px;
+}
+.chat-popup .emoji .emoji-box a:hover{
+background-color: #DADCDE;
+}
+@media screen and (max-width: 993px){
+.chat-popup {
+    width: 100%;
+}
+.form-container {
+    width: 100% !important;
+}
 }
 /* Add styles to the form container */
 .form-container {
@@ -57,11 +120,11 @@
 .form-container textarea {
     width: 100%;
     padding: 15px;
-    margin: 5px 0 22px 0;
+    margin: 5px 0 5px 0;
     border: none;
     background: white;
     resize: none;
-    min-height: 100px;
+    min-height: 75px;
 }
 
 /* When the textarea gets focus, do something */
@@ -128,13 +191,37 @@
     height: 70%;
     background-color: #f1f1f1;
     color: white;
-    margin-bottom: 15px;
+    overflow: hidden;
+    overflow-y: auto;
 }
 
 .chat-read .your-text{
     max-width: 85%;
     padding: 5px;
     margin: auto;
+}
+.chat-read .your-text form{
+    background-color: white;
+    margin: 10px 0 10px 0;
+    color: #0f0f0f;
+    border-radius: 10px;
+    padding: 10px 0 0px 0;
+}
+.chat-read .your-text form input{
+    width: 92%;
+    margin-left: 4%;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    padding: 12px 0 12px 0;
+}
+.chat-read .your-text form button{
+    width: 100%;
+    border: none;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 12px 0 12px 0;
+    color: white;
+    background-color: #1877F2;
 }
 .chat-read .content{
     border-radius: 5px;
@@ -151,9 +238,9 @@
     height: 0;
     position: absolute;
     bottom: 0;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-bottom: 25px solid #0c5460 ;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 15px solid #0c5460 ;
 }
 .chat-read .sender{
     opacity: .65;
@@ -162,7 +249,7 @@
     font-weight: 700;
     display: -webkit-box;
     display: flex;
-    color: #ffffff !important;
+    color: #ffffff ;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     flex-direction: row;
@@ -173,7 +260,7 @@
     border-bottom-color: #1877F2 !important;
 }
 .chat-read .corner-left{
-    left: -17px;
+    left: -15px;
     border-bottom-color: #0f6674 !important;
 }
 .chat-read .color-bg{
@@ -182,4 +269,4 @@
 .chat-read .color-bg-left{
     background-color: #0f6674 !important
 }
-
+.emoji
