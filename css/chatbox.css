@@ -101,6 +101,15 @@ padding: 4px;
 .chat-popup .emoji .emoji-box a:hover{
 background-color: #DADCDE;
 }
+.chat-popup .emoji .powerby{
+    float: right;
+    color: #bbb;
+    font-size: 11px;
+    white-space: nowrap;
+}
+.chat-popup .emoji .powerby:hover{
+    transition: color .15s linear;
+}
 @media screen and (max-width: 993px){
 .chat-popup {
     width: 100%;
@@ -176,7 +185,7 @@ background-color: #DADCDE;
     margin-top: 4px;
     color: #999;
 }
-.chat-hear .chat-mid .description .online-dot{
+.chat-hear .chat-mid .description .online-dot , .offline-dot{
     display: inline-block;
     width: 8px;
     height: 8px;
@@ -186,6 +195,9 @@ background-color: #DADCDE;
     margin-right: 5px;
     position: relative;
     top: -2px;
+}
+.chat-hear .chat-mid .description .offline-dot{
+    background-color: #999;
 }
 .chat-read {
     height: 70%;
@@ -221,6 +233,7 @@ background-color: #DADCDE;
     border-bottom-left-radius: 10px;
     padding: 12px 0 12px 0;
     color: white;
+    cursor: pointer;
     background-color: #1877F2;
 }
 .chat-read .content{
