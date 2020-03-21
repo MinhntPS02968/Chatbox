@@ -9,7 +9,7 @@ function popup() {
     var popup = document.getElementById("topup");
     popup.style.display ="inline-block";
     popup.style.transition = "height 0.5s";
-    popup.style.width ="70px";
+    popup.style.width ="65px";
     popup.style.height ="300px";
 }
 function popout() {
