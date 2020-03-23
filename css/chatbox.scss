@@ -14,6 +14,74 @@ $font-family:"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 .full-Width{
   width: 100%;
 }
+.lightbox-target {
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  z-index: 10;
+  background: rgba(0,0,0,.7);
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  overflow: hidden;
+  img {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    bottom: 0;
+    max-height: 0%;
+    max-width: 0%;
+    border: 3px solid white;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+    box-sizing: border-box;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+  }
+  .lightbox-close {
+    display: block;
+    box-sizing: border-box;
+    background: transparent;
+    text-decoration: none;
+    color: $color-light-blue;
+    position: absolute;
+    top: 10px !important;
+    left: 10px;
+  }
+  .lightbox-close:before {
+    content: "";
+    display: block;
+    width: 1px;
+    position: absolute;
+    left: 26px;
+    top:10px;
+  }
+  .lightbox-close:after {
+    content: "";
+    display: block;
+    width: 1px;
+    position: absolute;
+    left: 26px;
+    top:10px;
+  }
+}
+.lightbox-target:target {
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .lightbox-close {
+    top: 0px;
+  }
+}
 .boxchat{
   display: inline-block;
   font-family:$font-family !important;
@@ -217,7 +285,7 @@ $font-family:"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
         opacity: 0.8;
       }
       .btn:hover{
-        @extend .open-button:hover;
+        opacity: 1;
       }
       .chat-hear{
         @extend .full-Width;
@@ -319,6 +387,98 @@ $font-family:"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
           -webkit-box-direction: normal;
           flex-direction: row;
           flex-wrap: wrap;
+        }
+        .text{
+          .lightbox{
+            img{
+              width: 100%;
+            }
+          }
+          .lightbox-target {
+            position: fixed;
+            top: -100%;
+            width: 100%;
+            background: rgba(0,0,0,.7);
+            opacity: 0;
+            -webkit-transition: opacity .5s ease-in-out;
+            -moz-transition: opacity .5s ease-in-out;
+            -o-transition: opacity .5s ease-in-out;
+            transition: opacity .5s ease-in-out;
+            overflow: hidden;
+            img {
+              margin: auto;
+              position: absolute;
+              top: 0;
+              left:0;
+              right:0;
+              bottom: 0;
+              max-height: 0%;
+              max-width: 0%;
+              border: 3px solid white;
+              box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+              box-sizing: border-box;
+              -webkit-transition: .5s ease-in-out;
+              -moz-transition: .5s ease-in-out;
+              -o-transition: .5s ease-in-out;
+              transition: .5s ease-in-out;
+            }
+            .lightbox-close {
+              display: block;
+              width:50px;
+              height:50px;
+              box-sizing: border-box;
+              background: white;
+              color: black;
+              text-decoration: none;
+              position: absolute;
+              top: -80px;
+              right: 0;
+              -webkit-transition: .5s ease-in-out;
+              -moz-transition: .5s ease-in-out;
+              -o-transition: .5s ease-in-out;
+              transition: .5s ease-in-out;
+            }
+            .lightbox-close:before {
+              content: "";
+              display: block;
+              height: 30px;
+              width: 1px;
+              background: black;
+              position: absolute;
+              left: 26px;
+              top:10px;
+              -webkit-transform:rotate(45deg);
+              -moz-transform:rotate(45deg);
+              -o-transform:rotate(45deg);
+              transform:rotate(45deg);
+            }
+            .lightbox-close:after {
+              content: "";
+              display: block;
+              height: 30px;
+              width: 1px;
+              background: black;
+              position: absolute;
+              left: 26px;
+              top:10px;
+              -webkit-transform:rotate(-45deg);
+              -moz-transform:rotate(-45deg);
+              -o-transform:rotate(-45deg);
+              transform:rotate(-45deg);
+            }
+          }
+          .lightbox-target:target {
+            opacity: 1;
+            top: 0;
+            bottom: 0;
+            img {
+              max-height: 100%;
+              max-width: 100%;
+            }
+            .lightbox-close {
+              top: 0px;
+            }
+          }
         }
         .corner-right{
           right: -15px;
