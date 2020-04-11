@@ -5,35 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="css/all.min.css" rel="stylesheet"/>
     <link href="css/chatbox.css" rel="stylesheet"/>
+    <link href="css/bootstrap-grid.css" rel="stylesheet"/>
     <script src="js/all.min.js"></script>
     <script src="js/chatbox.js"></script>
 </head>
 <body>
+<!--<div style="background: blue; height: 3000px">dsadasda</div>-->
 <div class="lightbox-target" id="Frog">
-    <img src="images/test.jpg"//>
+    <img src="images/test.jpg"/>
     <a class="lightbox-close" href="#"><i class="fas fa-2x fa-window-close"></i></a>
 </div>
-<div class="boxchat">
-        <div class="open-button">
-            <a href="javascript:void(0)" onmouseover="popup()"   onmouseout="popout()" onclick="openForm()"><i class="fab fa-3x fa-facebook-messenger icon"></i></a>
-        </div>
-        <div id="topup" onmouseover="popup()" onmouseout="popout()">
-            <a href="javascript:void(0)"> <i class="fab fa-instagram icon"></i> </a>
-            <a href="javascript:void(0)"> <i class="fab fa-instagram icon"></i> </a>
-            <a href="javascript:void(0)"> <i class="fab fa-instagram icon"></i> </a>
-            <a href="javascript:void(0)"> <i class="fab fa-instagram icon"></i> </a>
-        </div>
+<div class="boxchat" style="height: 3000px;">
+    <div class="open-button">
+        <a href="javascript:void(0)" onmouseover="popup()" onmouseout="popout()" onclick="openForm()"><i
+                class="fab fa-3x fa-facebook-messenger icon"></i></a>
+    </div>
+    <div id="topup" onmouseover="popup()" onmouseout="popout()">
+        <a href="javascript:void(0)"> <i class="fab fa-instagram icon"></i> </a>
+        <a href="javascript:void(0)"> <i class="fab fa-instagram icon"></i> </a>
+        <a href="javascript:void(0)"> <i class="fab fa-instagram icon"></i> </a>
+        <a href="javascript:void(0)"> <i class="fab fa-instagram icon"></i> </a>
+    </div>
     <div class="chat-popup" id="myForm">
-        <div class="form-container">
-            <div class="chat-hear">
-                <div class="chat-logo">RE:</div>
-                <div class="chat-mid">
-                    <div class="chat-title">Re:plain (en)</div> <div class="description"> <div class="online-dot"></div> The simplest live chat in the world.</div>
+        <div class="chat-container">
+            <div class="chat-top">
+                <div class="chat-logo">
+                    <img class="px-2" src="images/avt.png" style="width: 100%"/>
                 </div>
-                <div><a href="javascript:void(0)" class="cancel" onclick="closeForm()">
+                <div class="chat-mid">
+                    <div class="chat-title">Re:plain (en)</div>
+                    <div class="description">
+                        <div class="online-dot"></div>
+                        The simplest live chat in the world.
+                    </div>
+                </div>
+                <div><a href="javascript:void(0)" class="cancel mr-2" onclick="closeForm()">
                     <i class="fas fa-window-close"></i> </a></div>
             </div>
-            <div class="chat-read">
+            <div class="chat-middle">
                 <div class="your-text">
                     <div class="content color-bg content-right">
                         <div class="corner color-boder corner-right"></div>
@@ -165,76 +174,41 @@
                     </form>
                 </div>
             </div>
-
-            <form method="post">
-                <textarea placeholder="Type message.." name="msg" required></textarea>
-                <button>Send</button>
-            </form>
-            <div class="emoji">
-                <label for="file-input"><i class="fas fa-paperclip"></i></label>
-                <input id="file-input" style="display: none" type="file" accept="image/*"/>
-                <div class="emoji-box">
-                    <a href="#">
-                        <div class="popover__title">😀</div>
-                    </a>
-                    <div class="popover__content">
-                        <div class="emoji-hud">
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
-                            <div class="emoji-icon"><a href="javascript:void(0)" > 😀 </a></div>
+            <div class="chat-footer">
+                <form method="post" class="form-chat">
+                    <div class="row mx-0 d-flex justify-content-center powerby-box">
+                        <a class="powerby mr-2 my-2" href="#">PowerBy To Nam Son</a>
+                    </div>
+                    <div class="row mx-0">
+                        <div class="col-9 px-0">
+                            <input class="float-left message" placeholder="Type message.." name="msg" required></input>
+                        </div>
+                        <div class="col-3 px-0 pr-3">
+                            <div class="d-flex justify-content-between">
+                                <input id="file-input" style="display: none" type="file"
+                                       accept="image/*"/>
+                                <div class="icon">
+                                    <div class="emoji">
+                                        <div class="emoji-box">
+                                            <div class="popover__title">
+                                                <i class="far fa-smile-beam"></i>
+                                            </div>
+                                            <div class="popover__content">
+                                                <div class="emoji-hud">
+                                                    <div class="emoji-icon"><a href="javascript:void(0)"> 😀 </a></div>
+                                                    <div class="emoji-icon"><a href="javascript:void(0)"> 😀 </a></div>
+                                                    <div class="emoji-icon"><a href="javascript:void(0)"> 😀 </a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="icon" for="file-input"><i class="fas fa-paperclip"></i></div>
+                                <div class="icon"><i class="fab fa-telegram-plane"></i></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <a class="powerby" href="javascript:void(0)" >
-                    Powered by
-                    <i class="fas fa-bolt"></i> TNS</a>
+                </form>
             </div>
         </div>
     </div>
